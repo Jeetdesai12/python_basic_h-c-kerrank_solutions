@@ -1,0 +1,27 @@
+#h@ackerrank python basic certification problem- average function
+#solve with python 3
+#This is not a solution for python 2
+
+import math
+import os
+import random
+import re
+import sys
+
+# write your code here
+from statistics import mean
+
+
+def avg(*n):
+    return mean(n)
+
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    nums = list(map(int, input().split()))
+    res = avg(*nums)
+
+    fptr.write('%.2f' % res + '\n')
+
+    fptr.close()
